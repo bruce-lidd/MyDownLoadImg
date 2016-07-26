@@ -13,26 +13,11 @@
 		671DF9101D46F09F0052C5ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671DF90E1D46F09F0052C5ED /* Main.storyboard */; };
 		671DF9121D46F09F0052C5ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671DF9111D46F09F0052C5ED /* Assets.xcassets */; };
 		671DF9151D46F09F0052C5ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671DF9131D46F09F0052C5ED /* LaunchScreen.storyboard */; };
-		671DF9201D46F09F0052C5ED /* MyDownImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 671DF91F1D46F09F0052C5ED /* MyDownImageTests.m */; };
-		671DF92B1D46F09F0052C5ED /* MyDownImageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 671DF92A1D46F09F0052C5ED /* MyDownImageUITests.m */; };
+		671DF93A1D46F17B0052C5ED /* DownLoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 671DF9391D46F17B0052C5ED /* DownLoadImage.m */; };
+		671DF93D1D470BB10052C5ED /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 671DF93C1D470BB10052C5ED /* MyTableViewCell.m */; };
+		671DF9401D47117D0052C5ED /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 671DF93F1D47117D0052C5ED /* default.png */; };
+		676FAE9E1D474CEE006867D6 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 676FAE9D1D474CEE006867D6 /* FileManager.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		671DF91C1D46F09F0052C5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 671DF8FA1D46F09E0052C5ED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 671DF9011D46F09E0052C5ED;
-			remoteInfo = MyDownImage;
-		};
-		671DF9271D46F09F0052C5ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 671DF8FA1D46F09E0052C5ED /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 671DF9011D46F09E0052C5ED;
-			remoteInfo = MyDownImage;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		671DF9021D46F09E0052C5ED /* MyDownImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDownImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,30 +30,21 @@
 		671DF9111D46F09F0052C5ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		671DF9141D46F09F0052C5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		671DF9161D46F09F0052C5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		671DF91B1D46F09F0052C5ED /* MyDownImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDownImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		671DF91F1D46F09F0052C5ED /* MyDownImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDownImageTests.m; sourceTree = "<group>"; };
 		671DF9211D46F09F0052C5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		671DF9261D46F09F0052C5ED /* MyDownImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDownImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		671DF92A1D46F09F0052C5ED /* MyDownImageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDownImageUITests.m; sourceTree = "<group>"; };
 		671DF92C1D46F09F0052C5ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		671DF9381D46F17B0052C5ED /* DownLoadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadImage.h; sourceTree = "<group>"; };
+		671DF9391D46F17B0052C5ED /* DownLoadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadImage.m; sourceTree = "<group>"; };
+		671DF93B1D470BB10052C5ED /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		671DF93C1D470BB10052C5ED /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		671DF93F1D47117D0052C5ED /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		676FAE9C1D474CEE006867D6 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		676FAE9D1D474CEE006867D6 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		671DF8FF1D46F09E0052C5ED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		671DF9181D46F09F0052C5ED /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		671DF9231D46F09F0052C5ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,8 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				671DF9021D46F09E0052C5ED /* MyDownImage.app */,
-				671DF91B1D46F09F0052C5ED /* MyDownImageTests.xctest */,
-				671DF9261D46F09F0052C5ED /* MyDownImageUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,10 +75,15 @@
 		671DF9041D46F09E0052C5ED /* MyDownImage */ = {
 			isa = PBXGroup;
 			children = (
+				676FAE9B1D474C99006867D6 /* Util */,
 				671DF9081D46F09E0052C5ED /* AppDelegate.h */,
 				671DF9091D46F09F0052C5ED /* AppDelegate.m */,
 				671DF90B1D46F09F0052C5ED /* ViewController.h */,
 				671DF90C1D46F09F0052C5ED /* ViewController.m */,
+				671DF93B1D470BB10052C5ED /* MyTableViewCell.h */,
+				671DF93C1D470BB10052C5ED /* MyTableViewCell.m */,
+				671DF9381D46F17B0052C5ED /* DownLoadImage.h */,
+				671DF9391D46F17B0052C5ED /* DownLoadImage.m */,
 				671DF90E1D46F09F0052C5ED /* Main.storyboard */,
 				671DF9111D46F09F0052C5ED /* Assets.xcassets */,
 				671DF9131D46F09F0052C5ED /* LaunchScreen.storyboard */,
@@ -117,6 +96,7 @@
 		671DF9051D46F09E0052C5ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				671DF93E1D47115F0052C5ED /* image */,
 				671DF9061D46F09E0052C5ED /* main.m */,
 			);
 			name = "Supporting Files";
@@ -140,6 +120,23 @@
 			path = MyDownImageUITests;
 			sourceTree = "<group>";
 		};
+		671DF93E1D47115F0052C5ED /* image */ = {
+			isa = PBXGroup;
+			children = (
+				671DF93F1D47117D0052C5ED /* default.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		676FAE9B1D474C99006867D6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				676FAE9C1D474CEE006867D6 /* FileManager.h */,
+				676FAE9D1D474CEE006867D6 /* FileManager.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,42 +157,6 @@
 			productReference = 671DF9021D46F09E0052C5ED /* MyDownImage.app */;
 			productType = "com.apple.product-type.application";
 		};
-		671DF91A1D46F09F0052C5ED /* MyDownImageTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 671DF9321D46F09F0052C5ED /* Build configuration list for PBXNativeTarget "MyDownImageTests" */;
-			buildPhases = (
-				671DF9171D46F09F0052C5ED /* Sources */,
-				671DF9181D46F09F0052C5ED /* Frameworks */,
-				671DF9191D46F09F0052C5ED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				671DF91D1D46F09F0052C5ED /* PBXTargetDependency */,
-			);
-			name = MyDownImageTests;
-			productName = MyDownImageTests;
-			productReference = 671DF91B1D46F09F0052C5ED /* MyDownImageTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		671DF9251D46F09F0052C5ED /* MyDownImageUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 671DF9351D46F09F0052C5ED /* Build configuration list for PBXNativeTarget "MyDownImageUITests" */;
-			buildPhases = (
-				671DF9221D46F09F0052C5ED /* Sources */,
-				671DF9231D46F09F0052C5ED /* Frameworks */,
-				671DF9241D46F09F0052C5ED /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				671DF9281D46F09F0052C5ED /* PBXTargetDependency */,
-			);
-			name = MyDownImageUITests;
-			productName = MyDownImageUITests;
-			productReference = 671DF9261D46F09F0052C5ED /* MyDownImageUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,14 +168,6 @@
 				TargetAttributes = {
 					671DF9011D46F09E0052C5ED = {
 						CreatedOnToolsVersion = 7.3;
-					};
-					671DF91A1D46F09F0052C5ED = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 671DF9011D46F09E0052C5ED;
-					};
-					671DF9251D46F09F0052C5ED = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 671DF9011D46F09E0052C5ED;
 					};
 				};
 			};
@@ -232,8 +185,6 @@
 			projectRoot = "";
 			targets = (
 				671DF9011D46F09E0052C5ED /* MyDownImage */,
-				671DF91A1D46F09F0052C5ED /* MyDownImageTests */,
-				671DF9251D46F09F0052C5ED /* MyDownImageUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -246,20 +197,7 @@
 				671DF9151D46F09F0052C5ED /* LaunchScreen.storyboard in Resources */,
 				671DF9121D46F09F0052C5ED /* Assets.xcassets in Resources */,
 				671DF9101D46F09F0052C5ED /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		671DF9191D46F09F0052C5ED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		671DF9241D46F09F0052C5ED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				671DF9401D47117D0052C5ED /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,41 +209,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				671DF90D1D46F09F0052C5ED /* ViewController.m in Sources */,
+				671DF93A1D46F17B0052C5ED /* DownLoadImage.m in Sources */,
 				671DF90A1D46F09F0052C5ED /* AppDelegate.m in Sources */,
 				671DF9071D46F09E0052C5ED /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		671DF9171D46F09F0052C5ED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				671DF9201D46F09F0052C5ED /* MyDownImageTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		671DF9221D46F09F0052C5ED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				671DF92B1D46F09F0052C5ED /* MyDownImageUITests.m in Sources */,
+				671DF93D1D470BB10052C5ED /* MyTableViewCell.m in Sources */,
+				676FAE9E1D474CEE006867D6 /* FileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		671DF91D1D46F09F0052C5ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 671DF9011D46F09E0052C5ED /* MyDownImage */;
-			targetProxy = 671DF91C1D46F09F0052C5ED /* PBXContainerItemProxy */;
-		};
-		671DF9281D46F09F0052C5ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 671DF9011D46F09E0052C5ED /* MyDownImage */;
-			targetProxy = 671DF9271D46F09F0052C5ED /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		671DF90E1D46F09F0052C5ED /* Main.storyboard */ = {
@@ -433,52 +345,6 @@
 			};
 			name = Release;
 		};
-		671DF9331D46F09F0052C5ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MyDownImageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infohold.MyDownImageTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDownImage.app/MyDownImage";
-			};
-			name = Debug;
-		};
-		671DF9341D46F09F0052C5ED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = MyDownImageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infohold.MyDownImageTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDownImage.app/MyDownImage";
-			};
-			name = Release;
-		};
-		671DF9361D46F09F0052C5ED /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = MyDownImageUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infohold.MyDownImageUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = MyDownImage;
-			};
-			name = Debug;
-		};
-		671DF9371D46F09F0052C5ED /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = MyDownImageUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infohold.MyDownImageUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = MyDownImage;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -498,22 +364,7 @@
 				671DF9311D46F09F0052C5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		671DF9321D46F09F0052C5ED /* Build configuration list for PBXNativeTarget "MyDownImageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				671DF9331D46F09F0052C5ED /* Debug */,
-				671DF9341D46F09F0052C5ED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		671DF9351D46F09F0052C5ED /* Build configuration list for PBXNativeTarget "MyDownImageUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				671DF9361D46F09F0052C5ED /* Debug */,
-				671DF9371D46F09F0052C5ED /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
