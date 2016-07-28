@@ -9,46 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyDownImage/FileManager.m"
-            timestampString = "491365901.312369"
+            filePath = "MyDownImage/UIImage+GIF.m"
+            timestampString = "491385523.417456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "-loadImage:ofType:inDirectory:"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "+getPartImage:isLoadFinished:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__Block_byref_object_copy_"
-                  moduleName = "MyDownImage"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ldd/Desktop/MyDownImage/MyDownImage/FileManager.m"
-                  timestampString = "491365909.197236"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__Block_byref_object_dispose_"
-                  moduleName = "MyDownImage"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ldd/Desktop/MyDownImage/MyDownImage/FileManager.m"
-                  timestampString = "491365909.197363"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

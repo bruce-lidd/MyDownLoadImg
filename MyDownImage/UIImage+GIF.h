@@ -11,4 +11,5 @@
 @interface UIImage (GIF)
 + (UIImage *)animatedGIFNamed:(NSString *)name;
 + (UIImage *)animatedGIFWithData:(NSData *)data ;
++ (UIImage* )getPartImage:(NSData *)imageData isLoadFinished:(BOOL)isLoadFinished;
 @end

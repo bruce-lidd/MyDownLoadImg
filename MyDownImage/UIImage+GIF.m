@@ -32,7 +32,7 @@
         for (size_t i = 0; i < count; i++) {
             CGImageRef image = CGImageSourceCreateImageAtIndex(source, i, NULL);
             
-            duration += [self sd_frameDurationAtIndex:i source:source];
+            duration += [self frameDurationAtIndex:i source:source];
             
             [images addObject:[UIImage imageWithCGImage:image scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp]];
             
@@ -51,7 +51,7 @@
     return animatedImage;
 }
 
-+ (float)sd_frameDurationAtIndex:(NSUInteger)index source:(CGImageSourceRef)source {
++ (float)frameDurationAtIndex:(NSUInteger)index source:(CGImageSourceRef)source {
     float frameDuration = 0.1f;
     CFDictionaryRef cfFrameProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil);
     NSDictionary *frameProperties = (__bridge NSDictionary *)cfFrameProperties;
@@ -117,5 +117,13 @@
         return [UIImage imageNamed:name];
     }
 }
-
+//渐进式显示图片
++ (UIImage* )getPartImage:(NSData *)imageData isLoadFinished:(BOOL)isLoadFinished
+{
+    CGImageSourceRef incrementallyImgSource = CGImageSourceCreateIncremental(NULL);
+    CGImageSourceUpdateData(incrementallyImgSource, (CFDataRef)imageData, isLoadFinished);
+    CGImageRef imageRef = CGImageSourceCreateImageAtIndex(incrementallyImgSource, 0, NULL);
+    CGImageRelease(imageRef);
+    return  [UIImage imageWithCGImage:imageRef];
+}
 @end

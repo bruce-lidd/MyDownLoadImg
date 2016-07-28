@@ -13,17 +13,20 @@
     NSURLSessionTask *_task;
     NSMutableString* _urlStr;
     NSString * _defaultUrlStr;
+    BOOL _isFinishLoad;//是否加载完毕
+    long long _imageDataLength;//已经下载图片数据
 }
 - (id)initWithFrame:(CGRect)frame
 {
     if (self==[super initWithFrame:frame]) {
         self.imgView = [[UIImageView alloc]initWithFrame:frame];
         //图片居中显示
-        [self.imgView setContentMode:UIViewContentModeScaleAspectFit];
+        [self.imgView  setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+        [self.imgView setContentMode:UIViewContentModeScaleAspectFit] ;
         UIImage *img = [UIImage imageNamed:@"default"];
         [self.imgView setImage:img];
         [self addSubview:self.imgView];
-        
+        _isFinishLoad = NO;
         return self;
     }
     return nil;
@@ -80,6 +83,8 @@
 // 1.接收到服务器的响应
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
     // 允许处理服务器的响应，才会继续接收服务器返回的数据
+    _imageDataLength = response.expectedContentLength;
+    NSLog(@"%lld",_imageDataLength);
     completionHandler(NSURLSessionResponseAllow);
 }
 
@@ -87,6 +92,15 @@
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     // 处理每次接收的数据
     [self.imgData appendData:data];
+//    NSString* imgType = [self getImgType:_defaultUrlStr];
+//    if (![[imgType lowercaseString] isEqualToString:@"gif"]) {
+//        _isFinishLoad = NO;
+//        if (_imageDataLength == self.imgData.length) {
+//            _isFinishLoad = YES;
+//        }
+//        UIImage* img = [UIImage getPartImage:self.imgData isLoadFinished:_isFinishLoad];
+//        [self resetImg:img];
+//    }
 }
 
 // 3.请求成功或者失败（如果失败，error有值）
@@ -98,6 +112,9 @@
         NSString* imgType = [self getImgType:_defaultUrlStr];
        __block UIImage* img = nil;
         if (![[imgType lowercaseString] isEqualToString:@"gif"]) {
+//            if (!_isFinishLoad) {
+//                img = [UIImage getPartImage:self.imgData isLoadFinished:_isFinishLoad];
+//            }
            img = [UIImage imageWithData:self.imgData];
         }else{
             dispatch_sync(dispatch_get_main_queue(), ^{
@@ -105,8 +122,8 @@
             });
             
         }
-        
         [self resetImg:img];
+        
         //重置图片之后，保存到本地
         NSString* localDir = [self.fileManager createFile:_urlStr];
         

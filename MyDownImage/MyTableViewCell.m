@@ -17,7 +17,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    _imgView = [[DownLoadImage alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+    _imgView = [[DownLoadImage alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 640)];
     [self addSubview:_imgView];
     return self;
 }

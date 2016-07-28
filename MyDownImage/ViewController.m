@@ -25,7 +25,7 @@
 }
 - (void)initDataSource
 {
-    self.dataArr = [NSArray arrayWithObjects:@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"",@"", nil];
+    self.dataArr = [NSArray arrayWithObjects:@"", nil];
     
 }
 - (UITableView *)tableView
@@ -40,7 +40,7 @@
 #pragma mark+++++++++++++++++UITableViewDelegate+++++++++++++++++++++++++
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    return 640;
 }
 #pragma mark+++++++++++++++++UITableViewDataSource+++++++++++++++++++++++++
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -59,7 +59,9 @@
         cell = [[MyTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indentifier];
     }
     //gif 的url http://img.zcool.cn/community/014c62566557376ac725b2c8891d86.gif
-    [cell.imgView loadImageFromUrl:@"http://img.zcool.cn/community/014c62566557376ac725b2c8891d86.gif"];
+    //jpg 的url http://picm.photophoto.cn/005/008/008/0080080139.jpg
+    //   http://b.zol-img.com.cn/desk/bizhi/image/1/1920x1200/1348810232493.jpg
+    [cell.imgView loadImageFromUrl:@"http://b.zol-img.com.cn/desk/bizhi/image/1/1920x1200/1348810232493.jpg"];
     return cell;
 }
 - (void)didReceiveMemoryWarning {
