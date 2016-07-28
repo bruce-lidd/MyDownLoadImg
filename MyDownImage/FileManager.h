@@ -14,5 +14,5 @@
 //创建文件
 - (NSString *)createFile:(NSString*)urlStr;
 //把网络上请求的图片保存在本地
-- (void)saveDownloadImage:(NSString*)imageId withImage:(UIImage*)image localDir:(NSString*)resURL ofType:(NSString *)extension;
+- (void)saveDownloadImage:(NSString*)imageId withImage:(NSData*)imageData localDir:(NSString*)resURL ofType:(NSString *)extension;
 @end

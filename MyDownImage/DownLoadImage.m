@@ -7,7 +7,7 @@
 //
 
 #import "DownLoadImage.h"
-
+#import "UIImage+GIF.h"
 @implementation DownLoadImage
 {
     NSURLSessionTask *_task;
@@ -41,19 +41,17 @@
     }else{
         [self getImgFromNetWork:urlStr];
     }
-    
+
 }
+//从网络上获取图片
 - (void)getImgFromNetWork:(NSString *)urlStr
 {
     //组装url
     NSURL* url = [NSURL URLWithString:urlStr];
-    
     // 快捷方式获得session对象
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
                                                           delegate:self
                                                      delegateQueue:[[NSOperationQueue alloc] init]];
-    
-    
     _task = [session dataTaskWithRequest:[NSURLRequest requestWithURL:url]];
     //请求开始
     [_task resume];
@@ -97,12 +95,22 @@
     [_task resume];
     if (!error) {
         NSLog(@"下载成功");
-        UIImage* img = [UIImage imageWithData:self.imgData];
+        NSString* imgType = [self getImgType:_defaultUrlStr];
+       __block UIImage* img = nil;
+        if (![[imgType lowercaseString] isEqualToString:@"gif"]) {
+           img = [UIImage imageWithData:self.imgData];
+        }else{
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                img = [UIImage animatedGIFWithData:self.imgData];
+            });
+            
+        }
+        
         [self resetImg:img];
         //重置图片之后，保存到本地
         NSString* localDir = [self.fileManager createFile:_urlStr];
         
-        [self.fileManager saveDownloadImage:_urlStr withImage:img localDir:localDir ofType:[self getImgType:_defaultUrlStr]];
+        [self.fileManager saveDownloadImage:_urlStr withImage:self.imgData localDir:localDir ofType:imgType];
     }else{
         NSLog(@"下载失败");
     }
@@ -113,8 +121,10 @@
     NSString* extention = nil;
     if ([urlStr containsString:@"jpg"]) {
         extention = @"jpg";
-    }else{
+    }else if ([urlStr containsString:@"png"]){
         extention = @"png";
+    }else if ([urlStr containsString:@"gif"]){
+        extention = @"gif";
     }
     return extention;
 }

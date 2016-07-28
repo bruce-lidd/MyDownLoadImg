@@ -58,7 +58,8 @@
     if (!cell) {
         cell = [[MyTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indentifier];
     }
-    [cell.imgView loadImageFromUrl:@"http://pic.pptbz.com/pptpic/201110/20111014111307895.jpg"];
+    //gif 的url http://img.zcool.cn/community/014c62566557376ac725b2c8891d86.gif
+    [cell.imgView loadImageFromUrl:@"http://img.zcool.cn/community/014c62566557376ac725b2c8891d86.gif"];
     return cell;
 }
 - (void)didReceiveMemoryWarning {

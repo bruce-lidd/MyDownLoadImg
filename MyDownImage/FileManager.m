@@ -7,7 +7,7 @@
 //
 
 #import "FileManager.h"
-
+#import "UIImage+GIF.h"
 @implementation FileManager
 
 /**
@@ -34,7 +34,15 @@
 -(UIImage *) loadImage:(NSString *)fileName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath {
     NSArray* urlStrArr = [fileName componentsSeparatedByString:@"/"];
     NSString *imgPath = [NSString stringWithFormat:@"%@/%@.%@", directoryPath,[urlStrArr lastObject], extension];
-    UIImage* img = [UIImage imageWithContentsOfFile:imgPath];
+    __block UIImage* img = nil;
+    if ([[extension lowercaseString] containsString:@"gif"]) {
+        NSData* data = [NSData dataWithContentsOfFile:imgPath];
+        img = [UIImage animatedGIFWithData:data];
+        
+    }else{
+        img = [UIImage imageWithContentsOfFile:imgPath];
+    }
+    
     return img;
 }
 
@@ -70,23 +78,18 @@
  *  @param imageID 图片ID
  *  @param image
  */
-- (void)saveDownloadImage:(NSString*)imageId withImage:(UIImage*)image localDir:(NSString*)resURL ofType:(NSString *)extension
+- (void)saveDownloadImage:(NSString*)imageId withImage:(NSData*)imageData localDir:(NSString*)resURL ofType:(NSString *)extension
 {
-    [self saveImage:image withFileName:imageId ofType:extension inDirectory:resURL];
+    [self saveImage:imageData withFileName:imageId ofType:extension inDirectory:resURL];
     
 }
 
 //将所下载的图片保存到本地
--(void) saveImage:(UIImage *)image withFileName:(NSString *)imageName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath {
+-(void) saveImage:(NSData*)imageData withFileName:(NSString *)imageName ofType:(NSString *)extension inDirectory:(NSString *)directoryPath {
     NSLog(@"url   。。。。。。  %@",directoryPath);
     NSArray* urlStrArr = [imageName componentsSeparatedByString:@"/"];
     NSString* path = [directoryPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", [urlStrArr lastObject], extension]];
-    BOOL success;
-    if ([extension containsString:@"jpg"]) {
-        success =   [UIImageJPEGRepresentation(image, 1.0) writeToFile:path atomically:YES];
-    }else{
-        success = [UIImagePNGRepresentation(image) writeToFile:path options:NSAtomicWrite error:nil];
-    }
+    BOOL success =   [imageData writeToFile:path atomically:YES];
 
     
     if (success) {

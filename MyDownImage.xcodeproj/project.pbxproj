@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670D7F331D48B7C5002FC94D /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 670D7F321D48B7C5002FC94D /* UIImage+GIF.m */; };
 		671DF9071D46F09E0052C5ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 671DF9061D46F09E0052C5ED /* main.m */; };
 		671DF90A1D46F09F0052C5ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 671DF9091D46F09F0052C5ED /* AppDelegate.m */; };
 		671DF90D1D46F09F0052C5ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 671DF90C1D46F09F0052C5ED /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		670D7F311D48B7C5002FC94D /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		670D7F321D48B7C5002FC94D /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		671DF9021D46F09E0052C5ED /* MyDownImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDownImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		671DF9061D46F09E0052C5ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		671DF9081D46F09E0052C5ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 			children = (
 				676FAE9C1D474CEE006867D6 /* FileManager.h */,
 				676FAE9D1D474CEE006867D6 /* FileManager.m */,
+				670D7F311D48B7C5002FC94D /* UIImage+GIF.h */,
+				670D7F321D48B7C5002FC94D /* UIImage+GIF.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				671DF93A1D46F17B0052C5ED /* DownLoadImage.m in Sources */,
 				671DF90A1D46F09F0052C5ED /* AppDelegate.m in Sources */,
 				671DF9071D46F09E0052C5ED /* main.m in Sources */,
+				670D7F331D48B7C5002FC94D /* UIImage+GIF.m in Sources */,
 				671DF93D1D470BB10052C5ED /* MyTableViewCell.m in Sources */,
 				676FAE9E1D474CEE006867D6 /* FileManager.m in Sources */,
 			);
